@@ -1,6 +1,38 @@
 .header-container {
-  background-color: var(--dark-gray);
-  color: white;
-  height: 50px;
-  margin: 0 0 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .navabar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--border-radius-100);
+    background-color: var(--background-light);
+    border: 1px solid var(--light-grey-200);
+    backdrop-filter: blur(8px);
+    width: 1100px;
+    height: 70px;
+    padding: 0 3rem;
+    margin: 1rem 2rem;
+
+    .navbar-content {
+      display: flex;
+
+      .navbar-links {
+        display: flex;
+        gap: var(--gap-7);
+        font-weight: var(--fw-semibold);
+
+        a {
+          transition: opacity 0.3s ease, color 0.3s ease;
+          &:hover {
+            color: opacify($color: #000000b4, $amount: 0.001);
+          }
+        }
+      }
+    }
+  }
 }

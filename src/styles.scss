@@ -1,7 +1,31 @@
-* {
+// ========================================
+// WWA - WORLD WISE ADMISSION ©, TOUS DROITS RÉSERVÉS
+// ========================================
+
+// ========================================
+// IMPORT POLICES GOOGLE FONTS
+// ========================================
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background-light);
+  font-family: var(--font-family-terciary);
+}
+
+p {
+  color: var(--black);
+  font-family: var(--font-family-terciary);
 }
 
 ul {
@@ -14,187 +38,225 @@ img {
 
 a {
   text-decoration: none;
-  color: inherit; //Pour pas avoir la couleur par default et donc hériter de la couleur du parent
+  color: var(--black);
   cursor: pointer;
 }
 
 /*Definition de variables*/
 :root {
-  --font-family: "Kalam", cursive;
-  /* Colore principale (Verde Oliva) */
-  --primary: #b1a64b;
+  /* Polices */
+  --font-family-primary: "Sora", sans-serif;
+  --font-family-secondary: "Inter", "Sora", sans-serif;
+  --font-family-terciary: "Figtree", "Inter", sans-serif;
 
-  /* Colore secondario (Beige Chiaro) */
-  --secondary: #8c6e45;
-  --secondary-2: #dcd6ba;
+  /* Couleurs */
+  --primary-color-pink: #F02860;
+  --primary-color-yellow: #FDD737;
+  --secondary-color-white: #FFFFFF;
+  --secondary-color-light-pink: #FFE3EB;
 
-  --accent: #4b8490; /* Blu Grigio */
-  --accent-blue: #a1b8c8; /* Blu Polvere Chiaro */
-  --accent-blueLight: #d1e0e8; /* Blu Chiaro/Grigio Neutro */
+  /* Nuances des couleurs principales et secondaires */
+  --primary-color-pink-dark-300: #BA093A;
+  --primary-color-pink-dark-200: #C71043;
+  --primary-color-pink-dark-100: #E1104B;
+  --primary-color-pink-light-100: #FF4A7D;
+  --primary-color-pink-light-200: #FF628E;
+  --primary-color-pink-light-300: #FF93B1;
 
-  /* Neutri */
-  --lightGray: #ddd;
-  --text-regular: #333; /* Testo regolare */
+  --secondary-color-white-dark-300: #FF93B1;
+  --secondary-color-white-dark-300: #FFB8CC;
+  --secondary-color-white-dark-300: #FFCDDB;
+  --secondary-color-white-light-100: #FFF2F6;
+  --secondary-color-white-light-200: #FFFAFB;
 
-  /* Aggiunto un bianco sporco per sfondi */
-  --background-light: #efefef;
+  --primary-color-yellow-dark-300: #F1B100;
+  --primary-color-yellow-dark-200: #FABD16;
+  --primary-color-yellow-dark-100: #FDC837;
+  --primary-color-yellow-dark-100: #FFE782;
+  --primary-color-yellow-dark-200: #FFEFAC;
+  --primary-color-yellow-dark-300: #FFF7E1;
 
-  /* Aggiunto un grigio scuro per contrasto */
-  --dark-gray: #4b4b4b;
+  --secondary-color-white-dark-300: #E7E7E7;
+  --secondary-color-white-dark-200: #F4F4F4;
+  --secondary-color-white-dark-100: #FBFBFB;
+
+  /* Nuances de gris */
+  --black: #000000;
+  --black-light-100: #141414;
+  --black-light-200: #302e2a;
+  --black-light-300: #33312e;
+
+  --dark-grey: #4c4a47;
+  --dark-grey-light-100: #77746c;
+  --dark-grey-light-200: #999693;
+
+  --light-grey: #cccccc;
+  --light-grey-100: #dad4ca;
+  --light-grey-200: #ecebe5;
+
+  /* Gradient des couleurs */ 
+  --primary-color-pink-gradient: linear-gradient(45deg, #F02860, #FFE3EB);
+  --primary-color-yellow-gradient: linear-gradient(45deg, #FDD737, #FFFFFF);
+  --secondary-color-white-gradient: linear-gradient(45deg, #FFFFFF, #FFE3EB);
+  --secondary-color-light-pink-gradient: linear-gradient(45deg, #FFE3EB, #F02860);
+
+  /* Couleurs neutres et d'accompagnement */
+  --brown: #332323;
+  --brown-dark-100: #2B1E1E;
+
+  --light-blue: #DCF3FF;
+  --light-purple: #F2EBFF;
+  --light-green: #DBFBE0;
+  --background-light: #faf8f3;
+
+  /* Font Sizes */
+  --fs-xxs:0.5rem;
+  --fs-xs:0.75rem;
+  --fs-s:1rem; /* Standard (16px) */
+  --fs-sm:1.25rem;
+  --fs-md:1.5rem;
+  --fs-lg:1.75rem;
+  --fs-xl:2rem;
+  --fs-xxl:2.25rem;
+  --fs-xxxl:2.5rem;
+  --fs-display-1:3rem;
+  --fs-display-2:5rem;
+
+  /* Font Weights */
+  --fw-thin: 100;
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-regular: 400; /* Regular */
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-black: 900;
+
+  /* Border */ 
+  --border-width-none: 0px;
+  --border-width-thin: 1px;
+  --border-width-medium: 2px; /* Bordures standard */
+  --border-width-thick: 4px;
+
+  /* Border radius */
+  --border-radius-0: 0px;
+  --border-radius-1: 5px;
+  --border-radius-2: 8px;
+  --border-radius-3: 12px;
+  --border-radius-4: 16px;
+  --border-radius-5: 24px;
+  --border-radius-100: 100px;
+
+  /* Espacements */
+  --gap-0: 0px;
+  --gap-1: 3px;
+  --gap-2: 5px;
+  --gap-3: 7px;
+  --gap-5: 10px; /* Espacement standard */
+  --gap-6: 14px;
+  --gap-7: 18px;
+  --gap-8: 20px;
+  --gap-9: 25px;
+  --gap-10: 30px;
+
 }
 
-body {
-  padding: 0 100px;
-  min-height: 100vh;
-  background-color: var(--background-light);
-}
+// ========================================
+// STYLE CSS RÉUTILISÉ
+// ========================================
 
-// Layout
+/* Layouts */
+
+.container {
+  width: 100%;
+  max-width: 1394px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .module-container {
-  background-color: var(--primary);
   min-height: 100vh;
 }
 
 .page-container {
-  background-color: var(--accent-blue);
   border-radius: 10px;
   margin: 0 40px;
 }
 
-.d-flex {
-  display: flex;
-}
+/* Propriétées flexbox */
 
-.flex-row {
-  flex-direction: row;
-}
+.d-flex { display: flex; }
 
-.flex-column {
-  flex-direction: column;
-}
+.flex-row { flex-direction: row; }
 
-.flex-justify-content-center {
-  justify-content: center;
-}
+.flex-column { flex-direction: column; }
 
-.flex-justify-content-between {
-  justify-content: space-between;
-}
+.flex-justify-content-center { justify-content: center; }
 
-.flex-align-items-center {
-  align-items: center;
-}
+.flex-justify-content-between { justify-content: space-between; }
 
-.flex-align-items-between {
-  align-items: space-between;
-}
+.flex-align-items-center { align-items: center; }
+
+.flex-align-items-between { align-items: space-between; }
 
 .flex-fill {
-  flex: 1 1 auto; // Pour que l'élément prenne tout l'espace disponible
+  // Pour que l'élément prenne tout l'espace disponible
+  flex: 1 1 auto; 
 }
 
-.flex-30 {
-  flex: 1 1 30%;
-}
+.flex-30 { flex: 1 1 30%; }
 
-.flex-40 {
-  flex: 1 1 40%;
-}
+.flex-40 { flex: 1 1 40%; }
 
-.flex-50 {
-  flex: 1 1 50%;
-}
+.flex-50 { flex: 1 1 50%; }
 
-.flex-60 {
-  flex: 1 1 60%;
-}
+.flex-60 { flex: 1 1 60%; }
 
-.flex-70 {
-  flex: 1 1 70%;
-}
+.flex-70 { flex: 1 1 70%; }
 
 //Utils
 
-.w-50 {
-  width: 50%;
+.w-50 { width: 50%; }
+
+.w-100 { width: 100%; }
+
+.p-5 { padding: 5px; }
+
+.p-10 { padding: 10px; }
+
+.p-15 { padding: 15px; }
+
+.p-20 { padding: 20px;
 }
 
-.w-100 {
-  width: 100%;
-}
+.p-25 { padding: 25px; }
 
-.p-5 {
-  padding: 5px;
-}
+.m-5 { margin: 5px; }
 
-.p-10 {
-  padding: 10px;
-}
+.m-10 { margin: 10px; }
 
-.p-15 {
-  padding: 15px;
-}
+.m-15 { margin: 15px; }
 
-.p-20 {
-  padding: 20px;
-}
+.m-20 { margin: 20px; }
 
-.p-25 {
-  padding: 25px;
-}
+.m-25 { margin: 25px; }
 
-.m-5 {
-  margin: 5px;
-}
+.mt-5 { margin-top: 5px; }
 
-.m-10 {
-  margin: 10px;
-}
+.mt-10 { margin-top: 10px; }
 
-.m-15 {
-  margin: 15px;
-}
+.mt-20 { margin-top: 20px; }
 
-.m-20 {
-  margin: 20px;
-}
+.mt-25 { margin-top: 25px; }
 
-.m-25 {
-  margin: 25px;
-}
+.mb-5 { margin-bottom: 5px; }
 
-.mt-5 {
-  margin-top: 5px;
-}
+.mb-10 { margin-bottom: 10px; }
 
-.mt-10 {
-  margin-top: 10px;
-}
+.mb-20 { margin-bottom: 20px; }
 
-.mt-20 {
-  margin-top: 20px;
-}
-
-.mt-25 {
-  margin-top: 25px;
-}
-
-.mb-5 {
-  margin-bottom: 5px;
-}
-
-.mb-10 {
-  margin-bottom: 10px;
-}
-
-.mb-20 {
-  margin-bottom: 20px;
-}
-
-.mb-25 {
-  margin-bottom: 25px;
-}
+.mb-25 { margin-bottom: 25px; }
 
 // Components
 
@@ -207,3 +269,120 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+// ========================================
+// DESIGN MATERIEL
+// ========================================
+
+/* SET DE BOUTTONS ET LEURS VARIANTES */
+
+// Boutton blanc
+.button-primary-white {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-5);
+  background-color: #f0f0f0;
+  border: 0;
+  color: var(--black);
+  border-radius: 10rem;
+  padding: 0.5rem 1rem 0.375em 1rem;
+  margin-bottom: 7px;
+  font-weight: var(--fw-semibold);
+  font-family: var(--font-family-primary);
+  text-shadow: 0 0.0625em 0 #fff;
+  box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+    0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+    0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+  transition: 0.15s ease;
+  cursor: pointer;
+
+  p {
+    font-weight: var(--fw-semibold);
+    font-family: var(--font-family-primary);
+  }
+
+}
+.button-primary-white:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+    0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+    0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+// Boutton rose
+.button-primary-pink {
+  background-color: var(--primary-color-pink);
+  border: 0;
+  color: #fff; /* Texte blanc pour un bon contraste */
+  border-radius: 10rem;
+  padding: 0.375em 1em;
+  margin-bottom: 7px;
+  font-weight: var(--fw-regular);
+  font-family: var(--font-family-primary);
+  text-shadow: 0 0.0625em 0 rgba(255, 255, 255, 0.5); /* Effet lumineux sur le texte */
+  box-shadow: inset 0 0.0625em 0 0 #F56C8A, /* Ombre intérieure légèrement plus claire */
+    0 0.0625em 0 0 #F34777, /* Première ombre extérieure */
+    0 0.125em 0 0 #F02860, /* Ombre principale */
+    0 0.25em 0 0 #D02552, /* Ombre plus sombre pour profondeur */
+    0 0.3125em 0 0 #C0204C, /* Ton encore plus foncé */
+    0 0.375em 0 0 #B11C45, /* Accentuation foncée */
+    0 0.425em 0 0 #A1193E, /* Ombre très sombre finale */
+    0 0.425em 0.5em 0 #990E36; /* Ombre finale plus diffuse */
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+
+.button-primary-pink:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #F56C8A,
+    0 0.03em 0 0 #F34777,
+    0 0.0625em 0 0 #F02860,
+    0 0.125em 0 0 #D02552,
+    0 0.125em 0 0 #C0204C,
+    0 0.2em 0 0 #B11C45,
+    0 0.225em 0 0 #A1193E,
+    0 0.225em 0.375em 0 #990E36;
+}
+
+// Boutton jaune 
+.button-primary-yellow {
+  background-color: #FDD737;
+  border: 0;
+  color: #242424; /* Texte foncé pour un bon contraste avec le jaune */
+  border-radius: 10rem;
+  padding: 0.375em 1em;
+  margin-bottom: 7px;
+  font-weight: var(--fw-semibold);
+  font-family: var(--font-family-primary);
+  text-shadow: 0 0.0625em 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0.0625em 0 0 #FFE566, 0 0.0625em 0 0 #FCD947, 0 0.125em 0 0 #FDD737, 0 0.25em 0 0 #E5C030, 0 0.3125em 0 0 #D4AE2B, 0 0.375em 0 0 #C29C26, 0 0.425em 0 0 #B08A20, 0 0.425em 0.5em 0 #A2781C;
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+
+.button-primary-yellow:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #FFE566, 0 0.03em 0 0 #FCD947, 0 0.0625em 0 0 #FDD737, 0 0.125em 0 0 #E5C030, 0 0.125em 0 0 #D4AE2B, 0 0.2em 0 0 #C29C26, 0 0.225em 0 0 #B08A20, 0 0.225em 0.375em 0 #A2781C;
+}
+
+// Boutton noir 
+.button-primary-black {
+  background-color: #000000;
+  border: 0;
+  color: #ffffff; /* Texte blanc pour un contraste maximal */
+  border-radius: 10rem;
+  padding: 0.375em 1em;
+  margin-bottom: 7px;
+  font-weight: var(--fw-regular);
+  font-family: var(--font-family-primary);
+  text-shadow: 0 0.0625em 0 rgba(255, 255, 255, 0.2); /* Effet lumineux subtil */
+  box-shadow: inset 0 0.0625em 0 0 #4D4D4D, 0 0.0625em 0 0 #333333, 0 0.125em 0 0 #1A1A1A, 0 0.25em 0 0 #0D0D0D, 0 0.3125em 0 0 #0A0A0A, 0 0.375em 0 0 #080808, 0 0.425em 0 0 #050505, 0 0.425em 0.5em 0 rgba(0, 0, 0, 0.9);
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+
+.button-primary-black:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #4D4D4D, 0 0.03em 0 0 #333333, 0 0.0625em 0 0 #1A1A1A, 0 0.125em 0 0 #0D0D0D, 0 0.125em 0 0 #0A0A0A, 0 0.2em 0 0 #080808, 0 0.225em 0 0 rgba(0, 0, 0, 0.9), 0 0.225em 0.375em 0 rgba(0, 0, 0, 0.8);
+}
+
