@@ -1,0 +1,9 @@
+<div class="logos container">
+    <!-- La div logos-slide ci-dessous est dupliquée pour que le défilement des logos soit continue -->
+    <div class="logos-slide">
+        <img *ngFor="let logo of logos" [src]="logo" alt="Logo" />
+    </div>
+    <div class="logos-slide">
+        <img *ngFor="let logo of logos" [src]="logo" alt="Logo" />
+    </div>
+</div>

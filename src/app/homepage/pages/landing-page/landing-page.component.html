@@ -1,7 +1,375 @@
 <div class="module-container d-flex flex-column">
   <app-header></app-header>
   <div class="flex-fill">
-    <p>landing-page works!</p>
+    <section class="hero-section margin-360-2">
+      <div class="hero-navbar">
+        <nav class="navabar-container" >
+          <a href="">
+            <img ngSrc="assets/icone-yellow-wwa.svg" width="40" height="40" alt="Icône logo WWA">
+          </a>
+          <div class="navbar-content">
+            <ul class="navbar-links">
+              <li><a href="">Candidater</a></li>
+              <li><a href="">Programmes</a></li>
+              <li><a href="">Universités</a></li>
+              <li><a href="">À propos</a></li>
+            </ul>
+          </div>
+          <button class="button-primary-pink">
+            <fa-icon [icon]="faUser" [size]="'1x'"></fa-icon>
+            <p>Se connecter</p>
+          </button>
+        </nav>
+      </div>
+      <div class="hero-content">
+        <div class="mini-titre">
+          <div class="pulsing-point"></div>
+          <p>World Wise Admission</p>
+        </div>
+        <h1 class="hero-titre">Vos études <br> universitaires <br> <span class="hero-titre-class">en Chine</span> </h1>
+        
+        <p class="hero-texte">Optimisez le suivi de vos candidatures aux universités de Chine, Ghana et bien d’autres </p>
+        
+        <button class="button-primary-yellow">
+          <p>Candidater maintenant</p>
+          <fa-icon [icon]="faArrowRight" [size]="'1x'"></fa-icon>
+        </button>
+
+        <p class="hero-sous-texte">Commencez vos études à l'étranger dans les meilleures conditions</p>
+      </div>
+    </section>
+
+    <!-- BARRE DE DEFILEMENT DES LOGOS UNIVERSITES -->
+    <app-logo-carousel></app-logo-carousel>
+
+    <!-- SECTION "QUI SOMMES NOUS ?" -->
+     <section class="content-homepage container">
+      <div class="mini-titre-black">
+        <div class="pulsing-point"></div>
+        <p>Qui sommes nous ?</p>
+      </div>
+      <h1 class="titre-1_centered">Des accomplissements qui comptent</h1>
+      <div class="layout-1">
+        <div class="layout-1_image">
+          <img src="assets/img-etudiant-wwa.png" alt="">
+        </div>
+        <div class="layout-1_texte">
+          <h2 class="titre-2">World Wise Admission, votre partenaire commencer vos études.</h2>
+          <p >World Wise Admission, vous accompagne dans vos démarches de candidatures universitaires dans différents pays du receuil des documents nécéssaires, aux démarches d’obtention visa et même jusqu’à votre acceuil dans le pays de destination.</p>
+          <div class="parent">
+            <div class="div1">
+              <h3 class="titre-3">100 Universités</h3>
+              <div class="separateur"></div>
+              <p>Partenaires et affiliées disponibles</p>
+            </div>
+            <div class="div2">
+              <h3 class="titre-3">1000 Programmes</h3>
+              <div class="separateur"></div>
+              <p>Programmes d’études possibles</p>
+            </div>
+            <div class="div3">
+              <h3 class="titre-3">1000 Destinations</h3>
+              <div class="separateur"></div>
+              <p>Pays et villes au sein desquel débuter ses études universitaires</p>
+            </div>
+            <div class="div4">
+              <h3 class="titre-3">550 Étudiants</h3>
+              <div class="separateur"></div>
+              <p>De nombreux étudiants acompagnés post-bac</p>
+            </div>
+          </div>
+          <button class="cta-link">
+            <span>En savoir plus</span>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+     </section>
+
+    <!-- SECTION UNIVERSITES PARTENAIRES -->
+
+    <section class="content-homepage container">
+      <div class="layout-2">
+        <div class="mini-titre-black">
+          <div class="pulsing-point"></div>
+          <p>Qui sommes nous ?</p>
+        </div>
+        <h1 class="titre-1">De nombreuses <br> destinations d’études</h1>
+        <p style="width: 55rem;">Les universitées partenaires WWA ont été sélectionnées pour leur excellence et les retours d’expériences fait par les anciens étudiants étranger.</p>
+        <ul class="card-list">
+          <li class="card-item">
+            <a href="" class="card-link">
+              <img src="assets/img-uni-1-wwa.png" alt="Image Université" class="card-image">
+              <div class="uni-badges-matieres">
+                <p class="medecine">Médecine</p>
+                <p class="maths">Maths</p>
+                <p class="chimie">Chimie</p>
+                <p class="biologie">Biologie</p>
+              </div>
+              <h3 class="titre-3">Université de Fudan</h3>
+              <p>Plus de 3000 étudiants étrangers accueillis par an, 9ème au classement des meilleures écoles scientifiques de Chine. L’université de Fudan propose des curcus post-bac jusqu’à Bac+5...</p>
+              <div>
+                <button class="cta-link">
+                  <span>En savoir plus</span>
+                  <svg width="15px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="" class="card-link">
+              <img src="assets/img-uni-1-wwa.png" alt="Image Université" class="card-image">
+              <div class="uni-badges-matieres">
+                <p class="medecine">Médecine</p>
+                <p class="maths">Maths</p>
+                <p class="chimie">Chimie</p>
+                <p class="biologie">Biologie</p>
+              </div>
+              <h3 class="titre-3">Université de Fudan</h3>
+              <p>Plus de 3000 étudiants étrangers accueillis par an, 9ème au classement des meilleures écoles scientifiques de Chine. L’université de Fudan propose des curcus post-bac jusqu’à Bac+5...</p>
+              <div>
+                <button class="cta-link">
+                  <span>En savoir plus</span>
+                  <svg width="15px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="" class="card-link">
+              <img src="assets/img-uni-1-wwa.png" alt="Image Université" class="card-image">
+              <div class="uni-badges-matieres">
+                <p class="medecine">Médecine</p>
+                <p class="maths">Maths</p>
+                <p class="chimie">Chimie</p>
+                <p class="biologie">Biologie</p>
+              </div>
+              <h3 class="titre-3">Université de Fudan</h3>
+              <p>Plus de 3000 étudiants étrangers accueillis par an, 9ème au classement des meilleures écoles scientifiques de Chine. L’université de Fudan propose des curcus post-bac jusqu’à Bac+5...</p>
+              <div>
+                <button class="cta-link">
+                  <span>En savoir plus</span>
+                  <svg width="15px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="" class="card-link">
+              <img src="assets/img-uni-1-wwa.png" alt="Image Université" class="card-image">
+              <div class="uni-badges-matieres">
+                <p class="medecine">Médecine</p>
+                <p class="maths">Maths</p>
+                <p class="chimie">Chimie</p>
+                <p class="biologie">Biologie</p>
+              </div>
+              <h3 class="titre-3">Université de Fudan</h3>
+              <p>Plus de 3000 étudiants étrangers accueillis par an, 9ème au classement des meilleures écoles scientifiques de Chine. L’université de Fudan propose des curcus post-bac jusqu’à Bac+5...</p>
+              <div>
+                <button class="cta-link">
+                  <span>En savoir plus</span>
+                  <svg width="15px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <button class="cta-link">
+          <span>Découvrir toutes les Universités et Destinations</span>
+          <svg width="15px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="content-homepage container">
+      <div class="mini-titre-black">
+        <div class="pulsing-point"></div>
+        <p>Notre mission, votre réussite</p>
+      </div>
+      <h1 class="titre-1_centered">Candidature, voyage, bourse d’étude, rentrée universitaire</h1>
+      <div class="layout-3">
+        <p class="texte-centre" >Que ce soit en Afrique ou en Asie, notre équipe s’appuie sur une expérience et une maîtrise des process pour optimiser et suivre pour vous vos candidatures dans les universitées que vous souhaitez intégrer. </p>
+        <div class="layout-3_content">
+          <div class="layout-3_steps">
+            <ul>
+              <li>
+                <details class="step-dropdown">
+                  <summary class="titre-3" >Candidature éfficaces</summary>
+                  <div class="step-dropdown-content">
+                    <p>ne dit pas facilitez Naviguez aisément à travers les démarches de candidature universitaire grâce à notre équipe d'experts. Nous soumettons votre dossier à toutes les universités de votre choix, augmentant en moyenne de 74 % vos chances d'admission dans l'université de vos rêves.</p>
+                  </div>
+                </details>
+              </li>
+              <li>
+                <details class="step-dropdown">
+                  <summary class="titre-3" >Candidature éfficaces</summary>
+                  <div class="step-dropdown-content">
+                    <p>ne dit pas facilitez Naviguez aisément à travers les démarches de candidature universitaire grâce à notre équipe d'experts. Nous soumettons votre dossier à toutes les universités de votre choix, augmentant en moyenne de 74 % vos chances d'admission dans l'université de vos rêves.</p>
+                  </div>
+                </details>
+              </li>
+              <li>
+                <details class="step-dropdown">
+                  <summary class="titre-3" >Candidature éfficaces</summary>
+                  <div class="step-dropdown-content">
+                    <p>ne dit pas facilitez Naviguez aisément à travers les démarches de candidature universitaire grâce à notre équipe d'experts. Nous soumettons votre dossier à toutes les universités de votre choix, augmentant en moyenne de 74 % vos chances d'admission dans l'université de vos rêves.</p>
+                  </div>
+                </details>
+              </li>
+              <li>
+                <details class="step-dropdown">
+                  <summary class="titre-3" >Candidature éfficaces</summary>
+                  <div class="step-dropdown-content">
+                    <p>ne dit pas facilitez Naviguez aisément à travers les démarches de candidature universitaire grâce à notre équipe d'experts. Nous soumettons votre dossier à toutes les universités de votre choix, augmentant en moyenne de 74 % vos chances d'admission dans l'université de vos rêves.</p>
+                  </div>
+                </details>
+              </li>
+            </ul>
+          </div>
+          <div class="layout-3_gifs">
+            <img src="assets/img-vide-wwa.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION TESTIMONIALS -->
+
+    <section class="content-homepage">
+      <div class="layout-4">
+        <div class="layout-4_content container">
+          <div class="row">
+            <div class="col">
+              <div class="mini-titre-black">
+                <div class="pulsing-point"></div>
+                <p>Témoignages et avis clients</p>
+              </div>
+              <h1 class="titre-1">Vous êtes en bonne compagnie</h1>
+              <p>Lisez ce que nos clients, étudiants que nous avons accompagnés disent de nous et voyez par vous-même !</p>
+              <div>
+                <button class="cta-link">
+                  <span>Voir tous les avis et témoignages</span>
+                  <svg width="15px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row">
+                <div class="note">
+                  <img src="assets/img-note-google-wwa.png" alt="">
+                </div>
+                <div class="note">
+                  <img src="assets/img-note-capterra-wwa.png" alt="">
+                </div>
+              </div>
+              <div class="note">
+                <img src="assets/img-note-trustpilot-wwa.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials container">
+          
+          <!-- Le Testimonial Slide doit se repéter 3 fois au minimum pour assurer une continueté du défilement -->
+          <div class="testimonials-slide ">
+
+            <!-- Voici ci-dessous une card de Testimonial qui se repète -->
+            <a class="testimonial-content">
+              <img src="assets/img-vide-wwa.png" alt="">
+              <div class="testimonial-texte">
+                <h3 class="titre-3">Ngolo BADINGA</h3>
+                <p class="testimonial-desc" >Guinéenne en Corée, à l’Université de Pyongyang </p>
+                <p class="testimonial-comment" >“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida, lacus vitae malesuada ullamcorper, diam turpis sollicitudin lorem, a tincidunt risus nisl a lacus. Nulla volutpat suscipit facilisis.”</p>
+                <div>
+                  <button class="cta-link">
+                    <span>Voir témoignage</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- DEUXIEME TESTIMONIAL -->
+          <div class="testimonials-slide ">
+            <a class="testimonial-content">
+              <img src="assets/img-vide-wwa.png" alt="">
+              <div class="testimonial-texte">
+                <h3 class="titre-3">Ngolo BADINGA</h3>
+                <p class="testimonial-desc" >Guinéenne en Corée, à l’Université de Pyongyang </p>
+                <p class="testimonial-comment" >“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida, lacus vitae malesuada ullamcorper, diam turpis sollicitudin lorem, a tincidunt risus nisl a lacus. Nulla volutpat suscipit facilisis.”</p>
+                <div>
+                  <button class="cta-link">
+                    <span>Voir témoignage</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- TROISIEME TESTIMONIAL -->
+          <div class="testimonials-slide ">
+            <a class="testimonial-content">
+              <img src="assets/img-vide-wwa.png" alt="">
+              <div class="testimonial-texte">
+                <h3 class="titre-3">Ngolo BADINGA</h3>
+                <p class="testimonial-desc" >Guinéenne en Corée, à l’Université de Pyongyang </p>
+                <p class="testimonial-comment" >“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida, lacus vitae malesuada ullamcorper, diam turpis sollicitudin lorem, a tincidunt risus nisl a lacus. Nulla volutpat suscipit facilisis.”</p>
+                <div>
+                  <button class="cta-link">
+                    <span>Voir témoignage</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div> 
+    </section>
+
+    <!-- SECTION CALL TO ACTION -->
+     <section class="content-homepage call-to-action container">
+      <div class="mini-titre-black">
+        <div class="pulsing-point"></div>
+        <p>Commencer à candidater</p>
+      </div>
+      <h1 class="titre-1">Vous êtes en bonne compagnie</h1>
+      <p>Lisez ce que nos clients, étudiants que nous avons accompagnés disent de nous et voyez par vous-même !</p>
+      <button class="button-primary-yellow">
+        <p>Candidater maintenant</p>
+        <fa-icon [icon]="faArrowRight" [size]="'1x'"></fa-icon>
+      </button>
+     </section>
   </div>
   <app-footer></app-footer>
 </div>

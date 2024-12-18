@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faUser, } from '@fortawesome/free-regular-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,5 +10,6 @@ import { Component } from '@angular/core';
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
-
+  faUser = faUser;
+  faArrowRight = faArrowRight;
 }
