@@ -517,6 +517,77 @@ fa-icon {
   }
 }
 
+// Set Bouttons dropdown 
+
+// Boutton dropdown version blanche
+.dropdown-black {
+  cursor: pointer;
+  position: relative; /* Assure que le contenu est positionné par rapport à la dropdown */
+  min-width: 100px;
+  summary {
+    list-style: none;
+    font-size: var(--fs-md);
+    &::before {
+      content: " 🇫🇷 ";
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+
+  .dropdown-content-black {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px; /* Espace entre le summary et le contenu */
+    background: var(--brown);
+    min-width: 180px;
+    border: 1px solid var(--light-grey);
+    border-radius: var(--border-radius-4);
+    overflow: hidden;
+
+    a {
+      display: block;
+      color: var(--brown);
+      padding: 0.45rem 1rem;
+      min-width: 130px;
+      transition: opacity 0.3s ease, background-color 0.3s ease;
+      &:hover {
+        background-color: opacify($color: #4e4e4d1f, $amount: 0.001);
+      }
+    }
+  }
+}
+
+.button-qatorze {
+  padding: 0.45rem 0;
+  background-color: inherit;
+  color: var(--secondary-color-white);
+  font-family: var(--font-family-terciary);
+  font-size: var(--fs-md);
+  border: none;
+  position: relative;
+  display: inline-block;
+  height: fit-content;
+  width: fit-content;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px; /* Épaisseur du soulignement */
+    width: 0%;
+    background-color: var(--secondary-color-white); /* La couleur de l'underline */
+    transition: width 0.5s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+
 /* Différents titres */
 
 .titre-1 {
